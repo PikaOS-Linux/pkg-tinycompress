@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND = -Wall -pedantic -fsigned-char
+
+
+
+
+%:
+	dh $@
+
+#override_dh_auto_configure:
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+#override_dh_auto_build:
+
+
+

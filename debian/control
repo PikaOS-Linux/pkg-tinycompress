@@ -1,0 +1,31 @@
+Source: tinycompress
+Section: sound
+Priority: optional
+Maintainer: Sourav Das <souravdas142@gmail.com>
+Build-Depends: debhelper-compat (= 12),
+               automake,
+               autoconf,
+               pkg-config,
+               cmake,
+Standards-Version: 4.4.1
+Homepage: https://github.com/alsa-project/tinycompress
+Vcs-Browser: https://github.com/alsa-project/tinycompress
+Vcs-Git: https://github.com/alsa-project/tinycompress.git
+
+
+
+Package: libtinycompress-dev
+Architecture: linux-any
+Multi-Arch: same
+Depends: pkg-config, ${shlibs:Depends}, ${misc:Depends}
+Description: tinycompress is a library for compress audio offload in alsa
+ Contains files for development with tinycompress
+
+
+
+Package: libtinycompress-utils
+Architecture: linux-any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: tinycompress is a library for compress audio offload in alsa
+ Contains files Utilies for testing of compressed audio with
